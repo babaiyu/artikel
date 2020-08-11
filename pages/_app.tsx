@@ -1,4 +1,5 @@
 import {AppProps} from 'next/app';
+import '../styles/globals.css';
 
 // Redux config
 import {Provider} from 'react-redux';
