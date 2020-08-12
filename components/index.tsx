@@ -1,4 +1,6 @@
-import MyHead from './MyHead';
+// ================ PUBLIC WEB ================
 import NavHome from './NavHome';
+import LayoutHome from './LayoutHome';
+import Button from './Button';
 
-export {MyHead, NavHome};
+export {NavHome, LayoutHome, Button};

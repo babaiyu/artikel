@@ -1,5 +1,6 @@
 import {AppProps} from 'next/app';
 import '../styles/globals.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 // Redux config
 import {Provider} from 'react-redux';
