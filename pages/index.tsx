@@ -1,16 +1,37 @@
 import {LayoutHome} from '../components';
 
+const dataCarousel = [
+  'HOME',
+  'POPULER',
+  'LIFESTYLE',
+  'CORONAVIRUS',
+  'PENDIDIKAN',
+  'INTERNET',
+  'HOME2',
+  'POPULER2',
+  'LIFESTYLE2',
+  'CORONAVIRUS2',
+  'PENDIDIKAN2',
+  'INTERNET2',
+  'HOME3',
+  'POPULER3',
+  'LIFESTYLE3',
+  'CORONAVIRUS3',
+  'PENDIDIKAN3',
+  'Selebihnya',
+];
+
 const App = () => {
   // Render
   return (
     <LayoutHome activeNum={0} title="Home">
       <div className="container mx-auto mt-5">
-        <i>
-          <u className="animate-pulse">Paling Trending</u>
-        </i>
-        <div className="mt-3 flex">
+        <div className="mt-3 md:flex">
           <div className="flex-1 pr-6">
-            <h1 className="font-bold text-5xl ">
+            <i>
+              <u className="animate-pulse">Gadget</u>
+            </i>
+            <h1 className="font-bold text-5xl">
               Alasan laptop Dell XPS 15 cocok untuk kalangan remaja
             </h1>
             <p className="text-gray-600 my-3">
@@ -25,20 +46,62 @@ const App = () => {
               <i className="far fa-calendar text-3xl text-gray-500" />
               <i className="far fa-eye text-3xl text-gray-500" />
               <i className="far fa-heart text-3xl text-gray-500" />
+              <button>
+                <i className="far fa-bookmark text-3xl text-gray-500" />
+              </button>
             </div>
-            <div className="flex-row flex justify-around align-middle">
-              <small className="text-gray-600">19/08/2020</small>
+            <div className="flex-row flex justify-around align-middle md:my-5">
+              <small className="text-gray-600">3 Juli 2020</small>
               <small className="text-gray-600">1450 Dilihat</small>
               <small className="text-gray-600">443 Menyukai</small>
+              <small></small>
             </div>
           </div>
           <div className="flex-1">
             <img
               src="https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1825&q=80"
               alt="thumbnail_picture"
-              className="inline w-full h-full object-cover rounded-tl-lg rounded-br-lg rounded-tr-sm rounded-bl-sm"
+              className="inline w-full h-full object-contain transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300 rounded-lg"
             />
           </div>
+        </div>
+      </div>
+      <div className="border-t-2 border-blue-500 my-6 container mx-auto" />
+      <div className="container mx-auto md:flex my-6">
+        <div className=" w-4/12 flex-wrap">
+          Kategori
+          <br />
+          {dataCarousel.map((e, i) => (
+            <button
+              key={i}
+              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 my-2 mr-2">
+              {e.toLocaleLowerCase()}
+            </button>
+          ))}
+        </div>
+        <div className="flex-1 flex-col">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+            <button
+              key={i}
+              className="border rounded justify-start w-full items-start flex mb-3">
+              <div className="flex-1 justify-start items-start text-left py-2 px-3">
+                <i>
+                  <u className="animate-pulse">Selebriti</u>
+                </i>
+                <h1 className="font-bold text-2xl">
+                  Yuk kenalan dengan Coco Trinidad, artis kebangsaan Filipina
+                </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div className="w-56">
+                <img
+                  alt="Mamank"
+                  src="https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg"
+                  className=" w-full rounded-tl-md rounded-bl-md"
+                />
+              </div>
+            </button>
+          ))}
         </div>
       </div>
     </LayoutHome>
