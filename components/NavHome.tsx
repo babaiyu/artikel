@@ -56,7 +56,7 @@ const NavHome = (props: Props) => {
   ));
 
   return (
-    <nav className="border-b-2 border-blue-500">
+    <nav className="border-b-2 border-blue-500 bg-white">
       <div className="container mx-auto flex items-center justify-between flex-wrap py-6 px-3">
         <div className="flex items-center flex-shrink-0 mr-6">
           <span className="font-semibold text-3xl tracking-tight">Artikel</span>

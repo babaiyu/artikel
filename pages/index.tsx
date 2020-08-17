@@ -7,18 +7,7 @@ const dataCarousel = [
   'CORONAVIRUS',
   'PENDIDIKAN',
   'INTERNET',
-  'HOME2',
-  'POPULER2',
-  'LIFESTYLE2',
-  'CORONAVIRUS2',
-  'PENDIDIKAN2',
-  'INTERNET2',
-  'HOME3',
-  'POPULER3',
-  'LIFESTYLE3',
-  'CORONAVIRUS3',
-  'PENDIDIKAN3',
-  'Selebihnya',
+  'Lihat kategori lainnya',
 ];
 
 const App = () => {
@@ -29,7 +18,7 @@ const App = () => {
         <div className="mt-3 md:flex">
           <div className="flex-1 pr-6">
             <i>
-              <u className="animate-pulse">Gadget</u>
+              <u>Gadget</u>
             </i>
             <h1 className="font-bold text-5xl">
               Alasan laptop Dell XPS 15 cocok untuk kalangan remaja
@@ -61,32 +50,32 @@ const App = () => {
             <img
               src="https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1825&q=80"
               alt="thumbnail_picture"
-              className="inline w-full h-full object-contain transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300 rounded-lg"
+              className="rounded-lg"
             />
           </div>
         </div>
       </div>
       <div className="border-t-2 border-blue-500 my-6 container mx-auto" />
       <div className="container mx-auto md:flex my-6">
-        <div className=" w-4/12 flex-wrap">
+        <div className="md:w-4/12 flex-wrap md:mb-5 md:pr-3 bg-green">
           Kategori
           <br />
           {dataCarousel.map((e, i) => (
             <button
               key={i}
-              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 my-2 mr-2">
+              className="inline-block bg-gray-200 hover:bg-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700 my-2 mr-2">
               {e.toLocaleLowerCase()}
             </button>
           ))}
         </div>
         <div className="flex-1 flex-col">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+          {[1, 2, 3, 4, 5, 6].map((i) => (
             <button
               key={i}
               className="border rounded justify-start w-full items-start flex mb-3">
               <div className="flex-1 justify-start items-start text-left py-2 px-3">
                 <i>
-                  <u className="animate-pulse">Selebriti</u>
+                  <u>Selebriti</u>
                 </i>
                 <h1 className="font-bold text-2xl">
                   Yuk kenalan dengan Coco Trinidad, artis kebangsaan Filipina
