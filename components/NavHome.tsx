@@ -13,11 +13,6 @@ const menu = [
     title: 'Tentang',
     nav: '/about',
   },
-  {
-    id: 3,
-    title: 'Harga',
-    nav: '/pricing',
-  },
 ];
 
 type Props = {
@@ -43,16 +38,15 @@ const NavHome = (props: Props) => {
     onShowMenu(!value);
   };
 
-  // Local Component
   const MyMenu = menu.map((e) => (
-    <Link key={e.id} href={e.nav}>
-      <a
-        className={`block mt-4 lg:inline-block ${
-          activeNum === e.id - 1 ? 'text-black' : 'text-gray-500'
-        } lg:mt-0 hover:text-blue-500 mr-4`}>
-        {e.title}
-      </a>
-    </Link>
+    <a
+      key={e.id}
+      href={e.nav}
+      className={`block mt-4 lg:inline-block ${
+        activeNum === e.id - 1 ? 'text-black' : 'text-gray-500'
+      } lg:mt-0 hover:text-blue-500 mr-4`}>
+      {e.title}
+    </a>
   ));
 
   return (
@@ -78,7 +72,7 @@ const NavHome = (props: Props) => {
             <input
               className="border-b focus:border-blue-500 focus:bg-opacity-25 appearance-none text-gray-700 lg:ml-3 leading-tight focus:outline-none py-2 px-3 mr-3 bg-gray-300 rounded"
               type="text"
-              placeholder="Mamank..."
+              placeholder="covid-19"
               value={search}
               onChange={setChangeSearch.bind(this)}
             />
