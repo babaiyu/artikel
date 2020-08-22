@@ -10,8 +10,8 @@ const SignIn = () => {
   // Render
   return (
     <LayoutHome activeNum={3} title="Masuk">
-      <div className="flex content-center justify-center w-full items-center mt-20">
-        <div className="rounded overflow-hidden shadow-md p-6 lg:w-4/12 border">
+      <div className="md:flex md:mx-3 content-center justify-center w-full items-center mt-20">
+        <div className="rounded overflow-hidden shadow-md p-6 border">
           <p className="font-bold text-2xl mb-8">Masuk</p>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">

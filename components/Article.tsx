@@ -29,7 +29,7 @@ export const Article = ({
   targetProfile,
 }: articleProps) => {
   return (
-    <div className="border rounded justify-start w-full items-start flex mb-3">
+    <div className="border rounded justify-start w-full items-start md:flex mb-3">
       <div className="flex-1 justify-start items-start text-left py-2 px-3">
         <a href={`/category/${targetCategory}`} className="italic underline">
           {data.category}
@@ -68,7 +68,7 @@ export const Article = ({
           </div>
         </div>
       </div>
-      <div className="w-56">
+      <div className="md:w-56">
         <img
           alt="Mamank"
           src={data.profileImg}

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import dayjs from 'dayjs';
 import {LayoutHome, HrBorder, Article} from '../components';
 import {listDummyArticle, listDummyCategory} from 'helpers/dummy';
@@ -11,11 +10,11 @@ const TopArticle = ({data}) => {
         <a href={`/category/${data.urlCategory}`} className="italic underline">
           {data.category}
         </a>
-        <Link href="/about">
-          <a href="#" className="font-bold text-5xl block hover:underline">
-            {data.title}
-          </a>
-        </Link>
+        <a
+          href={data.urlArticle}
+          className="font-bold text-5xl block hover:underline">
+          {data.title}
+        </a>
         <Truncate lines={2} ellipsis="...">
           <p className="text-gray-600 my-3">{data.description}</p>
         </Truncate>
@@ -44,11 +43,9 @@ const TopArticle = ({data}) => {
             src={data.img}
           />
           <div className="flex flex-col">
-            <Link href="/about">
-              <a href="#" className="hover:underline">
-                {data.profileName}
-              </a>
-            </Link>
+            <a href={data.urlProfile} className="hover:underline">
+              {data.profileName}
+            </a>
             <small>{data.profileType}</small>
           </div>
         </div>
@@ -57,7 +54,7 @@ const TopArticle = ({data}) => {
         <img
           src={data.img}
           alt="thumbnail_picture"
-          className="rounded-lg object-cover max-w-lg"
+          className="rounded-lg object-cover"
         />
       </div>
     </div>
