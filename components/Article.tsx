@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import dayjs from 'dayjs';
 
 interface articleProps {
   data: {
@@ -36,7 +37,9 @@ export const Article = ({data}: articleProps) => {
         <p>{data.description}</p>
         <div className="flex-row">
           <i className="far fa-calendar text-gray-500 mr-2" />
-          <small className="mr-5">{data.releaseDate}</small>
+          <small className="mr-5">
+            {dayjs(data.releaseDate).locale('id').format('D MMM YY')}
+          </small>
           <i className="far fa-eye text-gray-500 mr-2" />
           <small className="mr-5">{data.view}</small>
           <i className="far fa-heart text-gray-500 mr-2" />

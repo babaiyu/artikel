@@ -1,16 +1,7 @@
 import Link from 'next/link';
+import dayjs from 'dayjs';
 import {LayoutHome, HrBorder, Article} from '../components';
-import {listDummyArticle} from 'helpers/dummy';
-
-const dataCarousel = [
-  'TRENDING',
-  'POPULER',
-  'LIFESTYLE',
-  'CORONAVIRUS',
-  'PENDIDIKAN',
-  'INTERNET',
-  'Lihat kategori lainnya',
-];
+import {listDummyArticle, listDummyCategory} from 'helpers/dummy';
 
 const TopArticle = ({data}) => {
   return (
@@ -26,15 +17,37 @@ const TopArticle = ({data}) => {
         </Link>
         <p className="text-gray-600 my-3">{data.description}</p>
         <hr className="my-3" />
-        <div className="flex-row flex justify-around align-middle my-5">
-          <i className="far fa-calendar text-3xl text-gray-500" />
-          <i className="far fa-eye text-3xl text-gray-500" />
-          <i className="far fa-heart text-3xl text-gray-500" />
+        <div className="flex-row flex justify-around items-center my-5">
+          <div className="flex justify-center items-center">
+            <i className="far fa-calendar text-3xl text-gray-500" />
+            <small className="text-gray-600 ml-2">
+              {dayjs(data.releaseDate).locale('id').format('DD MMM YYYY')}
+            </small>
+          </div>
+          <div className="flex justify-center items-center">
+            <i className="far fa-eye text-3xl text-gray-500" />
+            <small className="text-gray-600 ml-2">{data.view} dilihat</small>
+          </div>
+          <div className="flex justify-center items-center">
+            <i className="far fa-heart text-3xl text-gray-500" />
+            <small className="text-gray-600 ml-2">{data.like} disukai</small>
+          </div>
         </div>
-        <div className="flex-row flex justify-around align-middle md:my-5">
-          <small className="text-gray-600">{data.releaseDate}</small>
-          <small className="text-gray-600">{data.view}</small>
-          <small className="text-gray-600">{data.like}</small>
+        <hr className="my-3" />
+        <div className="flex flex-row py-3 items-center">
+          <img
+            className="rounded-full h-16 w-16 object-cover mr-3 hover:shadow-md"
+            alt="img_profile"
+            src={data.img}
+          />
+          <div className="flex flex-col">
+            <Link href="/about">
+              <a href="#" className="hover:underline">
+                {data.profileName}
+              </a>
+            </Link>
+            <small>{data.profileType}</small>
+          </div>
         </div>
       </div>
       <div className="flex-1">
@@ -60,7 +73,7 @@ const App = () => {
         <div className="md:w-4/12 flex-wrap md:mb-5 md:pr-3 bg-green">
           Kategori
           <br />
-          {dataCarousel.map((e, i) => (
+          {listDummyCategory.map((e, i) => (
             <button
               key={i}
               className="inline-block bg-gray-200 hover:bg-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700 my-2 mr-2">

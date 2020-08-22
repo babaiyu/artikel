@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import Button from './Button';
 import {useState} from 'react';
+import Button from './Button';
 
 const menu = [
   {
@@ -53,7 +52,11 @@ const NavHome = (props: Props) => {
     <nav className="border-b-2 border-blue-500 bg-white">
       <div className="container mx-auto flex items-center justify-between flex-wrap py-6 px-3">
         <div className="flex items-center flex-shrink-0 mr-6">
-          <span className="font-semibold text-3xl tracking-tight">Artikel</span>
+          <a href="/">
+            <span className="font-semibold text-3xl tracking-tight">
+              Artikel
+            </span>
+          </a>
         </div>
         <div className="block lg:hidden">
           <button onClick={setMenu} className="flex items-center">
@@ -82,7 +85,9 @@ const NavHome = (props: Props) => {
           </div>
           <div>
             {MyMenu}
-            <Button title="Sign In" onClick={() => alert('Mmank')} />
+            <a href="/signin">
+              <Button title="Masuk" />
+            </a>
           </div>
         </div>
       </div>

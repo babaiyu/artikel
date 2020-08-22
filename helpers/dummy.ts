@@ -7,8 +7,7 @@ export const listDummyArticle = [
     releaseDate: '2020-08-19',
     view: 145,
     like: 86,
-    img:
-      'https://cdns.klimg.com/merdeka.com/i/w/news/2020/01/01/1137346/670x335/rahasia-poni-antibadai-lisa-blackpink-tetap-rapi-meskipun-dipakai-dance-heboh.jpg',
+    img: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileImg: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileName: 'Lisa Rahayu',
     profileType: 'content writer',
@@ -23,8 +22,7 @@ export const listDummyArticle = [
     releaseDate: '2020-08-19',
     view: 145,
     like: 86,
-    img:
-      'https://cdns.klimg.com/merdeka.com/i/w/news/2020/01/01/1137346/670x335/rahasia-poni-antibadai-lisa-blackpink-tetap-rapi-meskipun-dipakai-dance-heboh.jpg',
+    img: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileImg: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileName: 'Lisa Rahayu',
     profileType: 'content writer',
@@ -39,8 +37,7 @@ export const listDummyArticle = [
     releaseDate: '2020-08-19',
     view: 145,
     like: 86,
-    img:
-      'https://cdns.klimg.com/merdeka.com/i/w/news/2020/01/01/1137346/670x335/rahasia-poni-antibadai-lisa-blackpink-tetap-rapi-meskipun-dipakai-dance-heboh.jpg',
+    img: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileImg: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileName: 'Lisa Rahayu',
     profileType: 'content writer',
@@ -48,4 +45,14 @@ export const listDummyArticle = [
     urlCategory: '/about',
     urlProfile: '/about',
   },
+];
+
+export const listDummyCategory = [
+  'TRENDING',
+  'POPULER',
+  'LIFESTYLE',
+  'CORONAVIRUS',
+  'PENDIDIKAN',
+  'INTERNET',
+  'Lihat kategori lainnya',
 ];
