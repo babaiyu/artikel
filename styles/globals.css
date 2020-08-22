@@ -2,6 +2,7 @@
 @import '../node_modules/tailwindcss/components.css';
 @import '../node_modules/tailwindcss/utilities.css';
 
+/* ====================== SWITCH ROUNDED ==================== */
 .switch {
   position: relative;
   display: inline-block;
@@ -61,4 +62,10 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+/* ====================== SWITCH ROUNDED ==================== */
+
+/* ====================== MAX LINE 2 ==================== */
+.max-line-2 {
+  max-lines: 2;
 }

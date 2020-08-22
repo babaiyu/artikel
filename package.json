@@ -11,11 +11,13 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
     "dayjs": "^1.8.34",
+    "lodash": "^4.17.20",
     "next": "9.5.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hook-form": "^6.4.1",
     "react-redux": "^7.2.1",
+    "react-truncate": "^2.4.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
@@ -23,9 +25,11 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.159",
     "@types/node": "^14.0.27",
     "@types/react": "^16.9.46",
     "@types/react-redux": "^7.1.9",
+    "@types/react-truncate": "^2.3.3",
     "install": "^0.13.0",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.6.2",

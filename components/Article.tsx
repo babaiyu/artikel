@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import dayjs from 'dayjs';
+import Truncate from 'react-truncate';
 
 interface articleProps {
   data: {
@@ -17,24 +17,33 @@ interface articleProps {
     urlCategory: string;
     urlProfile: string;
   };
+  targetCategory: string;
+  targetArticle: string;
+  targetProfile: string;
 }
 
-export const Article = ({data}: articleProps) => {
+export const Article = ({
+  data,
+  targetCategory,
+  targetArticle,
+  targetProfile,
+}: articleProps) => {
   return (
     <div className="border rounded justify-start w-full items-start flex mb-3">
       <div className="flex-1 justify-start items-start text-left py-2 px-3">
-        <Link href="/about">
-          <a href="#" className="italic underline">
-            {data.category}
-          </a>
-        </Link>
+        <a href={`/category/${targetCategory}`} className="italic underline">
+          {data.category}
+        </a>
         <br />
-        <Link href="/about">
-          <a href="#" className="font-bold text-2xl hover:underline">
-            {data.title}
-          </a>
-        </Link>
-        <p>{data.description}</p>
+        <a
+          href={`/${targetArticle}`}
+          className="font-bold text-2xl hover:underline">
+          {data.title}
+        </a>
+        <br />
+        <Truncate lines={1} ellipsis="...">
+          {data.description}
+        </Truncate>
         <div className="flex-row">
           <i className="far fa-calendar text-gray-500 mr-2" />
           <small className="mr-5">
@@ -52,11 +61,9 @@ export const Article = ({data}: articleProps) => {
             src={data.img}
           />
           <div className="flex flex-col">
-            <Link href="/about">
-              <a href="#" className="hover:underline">
-                {data.profileName}
-              </a>
-            </Link>
+            <a href={`/${targetProfile}`} className="hover:underline">
+              {data.profileName}
+            </a>
             <small>{data.profileType}</small>
           </div>
         </div>
@@ -65,7 +72,7 @@ export const Article = ({data}: articleProps) => {
         <img
           alt="Mamank"
           src={data.profileImg}
-          className=" w-full rounded-tl-md rounded-bl-md"
+          className=" w-full rounded-tl-md rounded-bl-md shadow-lg"
         />
       </div>
     </div>

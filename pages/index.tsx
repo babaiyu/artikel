@@ -2,20 +2,23 @@ import Link from 'next/link';
 import dayjs from 'dayjs';
 import {LayoutHome, HrBorder, Article} from '../components';
 import {listDummyArticle, listDummyCategory} from 'helpers/dummy';
+import Truncate from 'react-truncate';
 
 const TopArticle = ({data}) => {
   return (
     <div className="mt-3 md:flex">
       <div className="flex-1 pr-6">
-        <i>
-          <u>{data.category}</u>
-        </i>
+        <a href={`/category/${data.urlCategory}`} className="italic underline">
+          {data.category}
+        </a>
         <Link href="/about">
           <a href="#" className="font-bold text-5xl block hover:underline">
             {data.title}
           </a>
         </Link>
-        <p className="text-gray-600 my-3">{data.description}</p>
+        <Truncate lines={2} ellipsis="...">
+          <p className="text-gray-600 my-3">{data.description}</p>
+        </Truncate>
         <hr className="my-3" />
         <div className="flex-row flex justify-around items-center my-5">
           <div className="flex justify-center items-center">
@@ -54,7 +57,7 @@ const TopArticle = ({data}) => {
         <img
           src={data.img}
           alt="thumbnail_picture"
-          className="rounded-lg object-cover"
+          className="rounded-lg object-cover max-w-lg"
         />
       </div>
     </div>
@@ -70,21 +73,30 @@ const App = () => {
       </div>
       <HrBorder />
       <div className="container mx-auto md:flex my-6">
-        <div className="md:w-4/12 flex-wrap md:mb-5 md:pr-3 bg-green">
+        <div className="md:w-4/12 flex-wrap md:mb-5 md:pr-3">
           Kategori
           <br />
           {listDummyCategory.map((e, i) => (
-            <button
+            <a
+              href={`/category/${e.toLowerCase()}`}
               key={i}
               className="inline-block bg-gray-200 hover:bg-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700 my-2 mr-2">
               {e.toLocaleLowerCase()}
-            </button>
+            </a>
           ))}
           <HrBorder />
         </div>
         <div className="flex-1 flex-col">
           {listDummyArticle.map((e, i) =>
-            i > 0 ? <Article key={i} data={e} /> : null,
+            i > 0 ? (
+              <Article
+                key={i}
+                data={e}
+                targetCategory={e.urlCategory}
+                targetArticle={e.urlArticle}
+                targetProfile={e.urlProfile}
+              />
+            ) : null,
           )}
         </div>
       </div>

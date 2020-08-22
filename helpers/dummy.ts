@@ -2,7 +2,7 @@ export const listDummyArticle = [
   {
     title: 'Yuk kenalan dengan Coco trinidad',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia porttitor purus vitae eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis scelerisque metus odio, ut faucibus nisl viverra eget. Praesent ornare tempus tellus...',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia porttitor purus vitae eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis scelerisque metus odio, ut faucibus nisl viverra eget. Praesent ornare tempus tellus',
     category: 'Selebriti',
     releaseDate: '2020-08-19',
     view: 145,
@@ -11,13 +11,14 @@ export const listDummyArticle = [
     profileImg: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileName: 'Lisa Rahayu',
     profileType: 'content writer',
-    urlArticle: '/about',
-    urlCategory: '/about',
-    urlProfile: '/about',
+    urlArticle: 'about',
+    urlCategory: 'selebriti',
+    urlProfile: 'about',
   },
   {
     title: 'Yuk kenalan dengan Coco trinidad',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia porttitor purus vitae eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis scelerisque metus odio, ut faucibus nisl viverra eget. Praesent ornare tempus tellus',
     category: 'Selebriti',
     releaseDate: '2020-08-19',
     view: 145,
@@ -26,13 +27,14 @@ export const listDummyArticle = [
     profileImg: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileName: 'Lisa Rahayu',
     profileType: 'content writer',
-    urlArticle: '/about',
-    urlCategory: '/about',
-    urlProfile: '/about',
+    urlArticle: 'about',
+    urlCategory: 'selebriti',
+    urlProfile: 'about',
   },
   {
     title: 'Yuk kenalan dengan Coco trinidad',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia porttitor purus vitae eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis scelerisque metus odio, ut faucibus nisl viverra eget. Praesent ornare tempus tellus',
     category: 'Selebriti',
     releaseDate: '2020-08-19',
     view: 145,
@@ -41,9 +43,9 @@ export const listDummyArticle = [
     profileImg: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileName: 'Lisa Rahayu',
     profileType: 'content writer',
-    urlArticle: '/about',
-    urlCategory: '/about',
-    urlProfile: '/about',
+    urlArticle: 'about',
+    urlCategory: 'selebriti',
+    urlProfile: 'about',
   },
 ];
 
@@ -54,5 +56,5 @@ export const listDummyCategory = [
   'CORONAVIRUS',
   'PENDIDIKAN',
   'INTERNET',
-  'Lihat kategori lainnya',
+  'SELEBRITI',
 ];
