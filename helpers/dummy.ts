@@ -58,3 +58,17 @@ export const listDummyCategory = [
   'INTERNET',
   'SELEBRITI',
 ];
+
+export const listMenuAdmin = [
+  {
+    id: 1,
+    title: 'Dashboard',
+    target: '/admin/dashboard',
+    subMenu: [],
+  },
+  {
+    id: 2,
+    title: 'Semua Artikel',
+    target: '/admin/artikel',
+  },
+];

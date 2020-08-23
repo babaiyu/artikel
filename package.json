@@ -16,6 +16,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hook-form": "^6.4.1",
+    "react-pro-sidebar": "^0.4.4",
     "react-redux": "^7.2.1",
     "react-truncate": "^2.4.0",
     "redux": "^4.0.5",

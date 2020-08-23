@@ -1,6 +1,7 @@
 import {AppProps} from 'next/app';
 import '../styles/globals.css';
 import '@fortawesome/fontawesome-free/css/all.css';
+import 'react-pro-sidebar/dist/css/styles.css';
 
 // Redux config
 import {Provider} from 'react-redux';

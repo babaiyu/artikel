@@ -2,16 +2,16 @@ import {useSelector} from 'react-redux';
 import {AppState} from 'storage/reducer';
 import {LayoutAdmin} from 'components';
 
-const Dashboard = () => {
+const Artikel = () => {
   // Props
   const state = useSelector((state: AppState) => state.user);
 
   // Render
   return (
-    <LayoutAdmin title="Dashboard" activeNum={0}>
-      <p>Halo, ini Dashboard</p>
+    <LayoutAdmin title="Artikel" activeNum={1}>
+      <p>Halo, ini Artikel</p>
     </LayoutAdmin>
   );
 };
 
-export default Dashboard;
+export default Artikel;
