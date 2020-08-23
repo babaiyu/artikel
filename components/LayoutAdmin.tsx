@@ -32,16 +32,25 @@ const LayoutAdmin = ({children, title, activeNum = 0}: Props) => {
       </Head>
       <body>
         <div className="flex h-screen">
-          <div className="flex-shrink-0">
+          <div className="flex flex-row justify-start items-start">
             <Sidebar
               collapsed={collapsed}
               toggled={toggled}
               handleToggle={handleToggleSidebar}
-              handleCollapse={handleCollapsedChange}
               active={activeNum}
             />
+            <button className="p-3" onClick={handleCollapsedChange}>
+              <i className="fas fa-bars text-xl hover:text-gray-600" />
+            </button>
           </div>
           <div className="flex-1 py-3 px-5 overflow-y-auto h-screen">
+            <div className="flex flex-row justify-between items-center">
+              <h1 className="text-xl">{title}</h1>
+              <button>
+                <i className="fa fa-power-off text-xl hover:text-red-500" />
+              </button>
+            </div>
+            <hr className="my-3" />
             {children}
           </div>
         </div>

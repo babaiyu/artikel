@@ -59,16 +59,30 @@ export const listDummyCategory = [
   'SELEBRITI',
 ];
 
+// USE for Admin Menu
 export const listMenuAdmin = [
   {
     id: 1,
     title: 'Dashboard',
     target: '/admin/dashboard',
-    subMenu: [],
+    icon: 'fas fa-tachometer-alt',
   },
   {
     id: 2,
-    title: 'Semua Artikel',
+    title: 'Artikel',
     target: '/admin/artikel',
+    icon: 'far fa-list-alt',
+  },
+  {
+    id: 3,
+    title: 'Arsip',
+    target: '/admin/archive',
+    icon: 'fas fa-archive',
+  },
+  {
+    id: 3,
+    title: 'Pengaturan',
+    target: '/admin/settings',
+    icon: 'fas fa-cog',
   },
 ];

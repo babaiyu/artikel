@@ -9,24 +9,19 @@ import {
 } from 'react-pro-sidebar';
 import {listMenuAdmin} from 'helpers/dummy';
 
-const Sidebar = ({
-  collapsed,
-  toggled,
-  handleToggle,
-  handleCollapse,
-  active,
-}) => {
+const Sidebar = ({collapsed, toggled, handleToggle, active}) => {
   return (
     <ProSidebar collapsed={collapsed} toggled={toggled} onToggle={handleToggle}>
       <SidebarHeader className="text-center">
-        <h1 className="text-xl">Dashboard</h1>
-        <button onClick={handleCollapse}>Col</button>
+        <h1 className="text-xl">A{!collapsed && 'rtikel'}</h1>
       </SidebarHeader>
       <SidebarContent>
         <Menu iconShape="circle">
           {listMenuAdmin.map((e, i) => (
             <Link key={e.id} href={e.target}>
-              <MenuItem active={i === active ? true : false}>
+              <MenuItem
+                icon={<i className={`${e.icon} text-xl`} />}
+                active={i === active ? true : false}>
                 {e.title}
               </MenuItem>
             </Link>
