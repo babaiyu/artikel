@@ -1,11 +1,33 @@
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
 import {useForm} from 'react-hook-form';
-import {LayoutHome, Button} from '../components';
+import {useDispatch, useSelector} from 'react-redux';
+import {LayoutHome, Button} from 'components';
 import {emailPattern} from 'helpers/regex';
+import {userLoginAction} from 'storage/user/user.action';
+import {AppState} from 'storage/reducer';
 
 const SignIn = () => {
+  // Props
+  const stateUser = useSelector((state: AppState) => state.user);
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  // Props function
+  const onSubmit = (data: any) => {
+    dispatch(userLoginAction(data));
+    event.preventDefault();
+  };
+
+  // Life Cycle
+  useEffect(() => {
+    if (stateUser.isLoggedIn) {
+      router.push('/admin');
+    }
+  }, [stateUser.userLogin]);
+
   // Form Conf
   const {register, handleSubmit, errors} = useForm();
-  const onSubmit = (data) => console.log(data);
 
   // Render
   return (
@@ -23,7 +45,9 @@ const SignIn = () => {
                 type="email"
                 ref={register({required: true, pattern: emailPattern})}
               />
-              {errors.email && <span className="italic text-red-500">Enter valid email</span>}
+              {errors.email && (
+                <span className="italic text-red-500">Enter valid email</span>
+              )}
             </div>
             <div className="mb-5">
               <p className="mb-1">Password</p>
@@ -34,7 +58,9 @@ const SignIn = () => {
                 type="password"
                 ref={register({required: true, minLength: 6})}
               />
-              {errors.password && <span className="italic text-red-500">Min length is 6</span>}
+              {errors.password && (
+                <span className="italic text-red-500">Min length is 6</span>
+              )}
             </div>
             <div className="flex flex-row justify-between items-center">
               <div>
