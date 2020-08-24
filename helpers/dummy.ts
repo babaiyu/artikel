@@ -7,7 +7,8 @@ export const listDummyArticle = [
     releaseDate: '2020-08-19',
     view: 145,
     like: 86,
-    img: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
+    img:
+      'https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-chinese-style-landscape-banner-background-image_22660.jpg',
     profileImg: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileName: 'Lisa Rahayu',
     profileType: 'content writer',
@@ -23,7 +24,8 @@ export const listDummyArticle = [
     releaseDate: '2020-08-19',
     view: 145,
     like: 86,
-    img: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
+    img:
+      'https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-chinese-style-landscape-banner-background-image_22660.jpg',
     profileImg: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileName: 'Lisa Rahayu',
     profileType: 'content writer',
@@ -39,7 +41,8 @@ export const listDummyArticle = [
     releaseDate: '2020-08-19',
     view: 145,
     like: 86,
-    img: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
+    img:
+      'https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-chinese-style-landscape-banner-background-image_22660.jpg',
     profileImg: 'https://pbs.twimg.com/media/EUz5qgbUYAEKqdF.jpg',
     profileName: 'Lisa Rahayu',
     profileType: 'content writer',

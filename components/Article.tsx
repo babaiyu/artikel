@@ -29,7 +29,7 @@ export const Article = ({
   targetProfile,
 }: articleProps) => {
   return (
-    <div className="border rounded justify-start w-full items-start md:flex mb-3">
+    <div className="border rounded-sm justify-start w-full items-start md:flex mb-3">
       <div className="flex-1 justify-start items-start text-left py-2 px-3">
         <a href={`/category/${targetCategory}`} className="italic underline">
           {data.category}
@@ -58,7 +58,7 @@ export const Article = ({
           <img
             className="rounded-full h-16 w-16 object-cover mr-3 hover:shadow-md"
             alt="img_profile"
-            src={data.img}
+            src={data.profileImg}
           />
           <div className="flex flex-col">
             <a href={`/${targetProfile}`} className="hover:underline">
@@ -71,8 +71,8 @@ export const Article = ({
       <div className="md:w-56">
         <img
           alt="Mamank"
-          src={data.profileImg}
-          className=" w-full rounded-tl-md rounded-bl-md shadow-lg"
+          src={data.img}
+          className="shadow-lg rounded-tr-sm"
         />
       </div>
     </div>

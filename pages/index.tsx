@@ -11,7 +11,7 @@ const TopArticle = ({data}) => {
           {data.category}
         </a>
         <a
-          href={data.urlArticle}
+          href={`/${data.title}`}
           className="font-bold text-5xl block hover:underline">
           {data.title}
         </a>
@@ -40,7 +40,7 @@ const TopArticle = ({data}) => {
           <img
             className="rounded-full h-16 w-16 object-cover mr-3 hover:shadow-md"
             alt="img_profile"
-            src={data.img}
+            src={data.profileImg}
           />
           <div className="flex flex-col">
             <a href={data.urlProfile} className="hover:underline">
@@ -90,7 +90,7 @@ const App = () => {
                 key={i}
                 data={e}
                 targetCategory={e.urlCategory}
-                targetArticle={e.urlArticle}
+                targetArticle={e.title}
                 targetProfile={e.urlProfile}
               />
             ) : null,
