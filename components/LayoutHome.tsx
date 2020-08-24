@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
-import Head from 'next/head';
 import NavHome from './NavHome';
+import MyHead from './MyHead';
 
 type Props = {
   children?: ReactNode;
@@ -11,11 +11,7 @@ type Props = {
 const LayoutHome = ({children, title, activeNum = 0}: Props) => {
   return (
     <div>
-      <Head>
-        <title>Artikel | {title}</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <MyHead title={title} />
       <header className="sticky top-0">
         <NavHome activeNum={activeNum} />
       </header>

@@ -22,7 +22,7 @@ const SignIn = () => {
   // Life Cycle
   useEffect(() => {
     if (stateUser.isLoggedIn) {
-      router.push('/admin');
+      router.push('/user');
     }
   }, [stateUser.userLogin]);
 

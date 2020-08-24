@@ -64,25 +64,31 @@ export const listMenuAdmin = [
   {
     id: 1,
     title: 'Dashboard',
-    target: '/admin/dashboard',
+    target: '/user/dashboard',
     icon: 'fas fa-tachometer-alt',
   },
   {
     id: 2,
     title: 'Artikel',
-    target: '/admin/artikel',
+    target: '/user/artikel',
     icon: 'far fa-list-alt',
   },
   {
     id: 3,
     title: 'Arsip',
-    target: '/admin/archive',
+    target: '/user/archive',
     icon: 'fas fa-archive',
   },
   {
-    id: 3,
+    id: 4,
+    title: 'Tersimpan',
+    target: '/user/bookmarks',
+    icon: 'fas fa-bookmark',
+  },
+  {
+    id: 5,
     title: 'Pengaturan',
-    target: '/admin/settings',
+    target: '/user/settings',
     icon: 'fas fa-cog',
   },
 ];

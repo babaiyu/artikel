@@ -9,7 +9,9 @@ const Admin = () => {
   const router = useRouter();
   useEffect(() => {
     if (state.isLoggedIn) {
-      router.replace('/admin/dashboard');
+      router.replace('/user/dashboard');
+    } else {
+      router.replace('/signin');
     }
   }, [state.isLoggedIn]);
 
