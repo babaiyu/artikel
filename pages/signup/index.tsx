@@ -6,10 +6,10 @@ import {LayoutHome, Button} from 'components';
 import {emailPattern} from 'helpers/regex';
 import {userLoginAction} from 'storage/user/user.action';
 import {AppState} from 'storage/reducer';
-import {apiSignIn} from 'services/api';
+import {apiSignUp} from 'services/api';
 import Link from 'next/link';
 
-const SignIn = () => {
+const SignUp = () => {
   // Props
   const stateUser = useSelector((state: AppState) => state.user);
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const SignIn = () => {
   // Props function
   const onSubmit = (data: any) => {
     setLoading(true);
-    apiSignIn(data)
+    apiSignUp(data)
       .then((res) => {
         console.log('RESPONSE LOGIN', res);
       })
@@ -47,8 +47,22 @@ const SignIn = () => {
     <LayoutHome activeNum={3} title="Masuk">
       <div className="md:flex md:mx-3 content-center justify-center w-full items-center mt-20">
         <div className="rounded overflow-hidden shadow-md p-6 border">
-          <p className="font-bold text-2xl mb-8">Masuk</p>
+          <p className="font-bold text-2xl mb-8">Daftar</p>
           <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="mb-3">
+              <p className="mb-1">Nama Lengkap</p>
+              <input
+                name="fullname"
+                className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-gray-200"
+                placeholder="Nama Lengkap"
+                ref={register({required: true})}
+              />
+              {errors.email && (
+                <span className="italic text-red-500">
+                  Nama Lengkap harus diisi
+                </span>
+              )}
+            </div>
             <div className="mb-3">
               <p className="mb-1">Email</p>
               <input
@@ -81,7 +95,7 @@ const SignIn = () => {
             </div>
             <div className="flex flex-row justify-between items-center">
               <small>Lupa password?</small>
-              <Link href="/signup">
+              <Link href="/signin">
                 <a href="#" className="hover:underline">
                   Buat akun baru
                 </a>
@@ -99,4 +113,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

@@ -1,5 +1,5 @@
 import {AppProps} from 'next/app';
-import '../styles/globals.css';
+import 'styles/globals.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'react-pro-sidebar/dist/css/styles.css';
 
